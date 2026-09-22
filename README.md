@@ -37,7 +37,7 @@ Per topswatch's own documented requirements:
 
 ## Updating to a newer upstream commit
 
-The Dockerfile pins upstream via a build arg (`TOPSWATCH_REF`, defaults to `main`). To rebuild against a specific upstream commit or tag:
+The Dockerfile pins upstream via a build arg (`TOPSWATCH_REF`, defaults to `master` — upstream's only branch). To rebuild against a specific upstream commit or tag:
 
 ```bash
 docker build --build-arg TOPSWATCH_REF=<commit-or-tag> -t topswatch-exporter .

@@ -8,7 +8,7 @@ FROM golang:1.23-bookworm AS build
 WORKDIR /src
 # Pin to a specific commit for reproducible builds — update deliberately,
 # not automatically, so a build here always matches a known upstream state.
-ARG TOPSWATCH_REF=main
+ARG TOPSWATCH_REF=master
 RUN git clone https://github.com/scottmbaker/topswatch.git . \
     && git checkout "${TOPSWATCH_REF}"
 RUN make build
