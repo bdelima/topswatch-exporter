@@ -1,0 +1,16 @@
+services:
+  topswatch-exporter:
+    image: bdelima/topswatch-exporter:latest
+    container_name: topswatch-exporter
+    restart: unless-stopped
+    privileged: true
+    pid: "host"
+    volumes:
+      - /sys:/sys:rw
+      - /proc:/proc:ro
+    ports:
+      - "9876:9876"   # also serves the built-in web dashboard directly
+    environment:
+      TZ: "America/New_York"
+    # networks:
+    #   - monitoring   # join your existing Prometheus/Grafana network here
