@@ -4,7 +4,7 @@
 # save/load workflow instead) — see README.md in this repo for the
 # licensing note before assuming anything about redistribution terms.
 
-FROM golang:1.23-bookworm AS build
+FROM golang:1.25-bookworm AS build
 WORKDIR /src
 # Pin to a specific commit for reproducible builds — update deliberately,
 # not automatically, so a build here always matches a known upstream state.
