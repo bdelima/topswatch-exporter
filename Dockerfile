@@ -15,9 +15,15 @@ RUN make build
 
 FROM debian:bookworm-slim
 
-LABEL org.opencontainers.image.source="https://github.com/scottmbaker/topswatch"
-LABEL org.opencontainers.image.description="Container build of scottmbaker/topswatch (Intel NPU/GPU/CPU Prometheus exporter via PMT hardware registers). Not an official upstream image."
-LABEL org.opencontainers.image.licenses="NOASSERTION"
+ARG VERSION=unknown
+ARG REVISION=unknown
+LABEL org.opencontainers.image.source="https://github.com/scottmbaker/topswatch" \
+      org.opencontainers.image.description="Container build of scottmbaker/topswatch (Intel NPU/GPU/CPU Prometheus exporter via PMT hardware registers). Not an official upstream image." \
+      org.opencontainers.image.licenses="NOASSERTION" \
+      org.opencontainers.image.url="https://github.com/bdelima/topswatch-exporter" \
+      org.opencontainers.image.version="${VERSION}" \
+      org.opencontainers.image.revision="${REVISION}"
+ENV APP_VERSION="${VERSION}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
