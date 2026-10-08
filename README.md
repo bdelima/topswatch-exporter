@@ -43,4 +43,4 @@ The Dockerfile pins upstream via a build arg (`TOPSWATCH_REF`, defaults to `mast
 docker build --build-arg TOPSWATCH_REF=<commit-or-tag> -t topswatch-exporter .
 ```
 
-Bump `VERSION` and push to `main` to publish a new tag via the release workflow (`.github/workflows/docker-publish.yml`) to [`bdelima/topswatch-exporter`](https://hub.docker.com/r/bdelima/topswatch-exporter) (multi-arch: `linux/amd64`, `linux/arm64`).
+Bump `VERSION` and push to `main` to publish a new tag via the release workflow (`.github/workflows/docker-publish.yml`) to [`bdelima/topswatch-exporter`](https://hub.docker.com/r/bdelima/topswatch-exporter) (`linux/amd64` only).
