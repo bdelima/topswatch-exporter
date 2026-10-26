@@ -6,7 +6,7 @@ A published, ready-to-run container build of [`topswatch`](https://github.com/sc
 
 ## Licensing note
 
-`topswatch` upstream has **no stated open-source license** (no `LICENSE` file, no license badge) as of this repo's creation. Upstream's own README documents a local `make docker` build plus a `docker save`/`docker load` workflow for offline transfer — it does not publish its own image. This repo builds from upstream source and publishes the result to Docker Hub; it is **not an official image**, and the licensing terms for redistributing a build of this project are unclear since none are stated upstream. If you're the topswatch author and want this changed or taken down, please open an issue.
+`topswatch` upstream has **no stated open-source license** (no `LICENSE` file, no license badge) as of this repo's creation. Upstream's own README documents a local `make docker` build plus a `docker save`/`docker load` workflow for offline transfer — it does not publish its own image. This repo builds from upstream source and publishes the result to Docker Hub; it is **not an official image**, and the licensing terms for redistributing a build of this project are unclear since none are stated upstream. If you're the topswatch author and want this changed or taken down, please open an issue. The `LICENSE` in this repo (MIT) covers only this repo's own files (Dockerfile, workflow, docs), not topswatch.
 
 ## Running it
 
